@@ -4,6 +4,11 @@ Lanzar siempre en segundo plano la DB MongoDB:
 Para ejecutar consulta, crear nuevas entradas o editar la BD:
 	C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe
 
+Ejecutar servidor:
+	npm start
+
+----------------------------------------
+
 - ver las bases de datos: >show dbs
 - acceder a DB: >use DB_name
 - Crear un nuevo elemento bookmar: >db.bookmarks.save((id:1, title:"algo"))
