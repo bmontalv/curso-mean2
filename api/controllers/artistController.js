@@ -13,6 +13,7 @@ console.log(typeof Artist.paginate);
 console.log(Artist.paginate);
 
 function getArtist(req, res) {
+  console.log(req.params)
   var artistId = req.params.id;
   console.log(artistId);
 
@@ -56,10 +57,10 @@ function getArtists(req, res) {
   } else {
     var  page = 1
   }
-  var itemsPerPage = 3; // 3 artistas por pagina
+  var itemsPerPage = 4; // 4 artistas por pagina
 
-  console.log(process.version)
   Artist = Artist.find().sort('name');
+
   Artist.model.paginate({}, page, itemsPerPage, function(err, artists, totalItems) {
   //paginate({}, itemsPerPage, page, function(err, artists, totalItems) {
     if (err) {
@@ -70,7 +71,7 @@ function getArtists(req, res) {
         res.status(404).send({message: 'No hay artistas'});        
       } else {
         return res.status(200).send({
-          pages: artists,
+          artists: artists,
           total: totalItems
         });        
       }

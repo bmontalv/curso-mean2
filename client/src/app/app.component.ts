@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 import * as $ from 'jquery';
 import { User } from './models/user';
 import { UserService } from './services/user.services';
+import { GLOBAL } from './services/global';
 
 @Component({
   selector: 'app-root',
@@ -18,12 +21,16 @@ export class AppComponent implements OnInit {
   public token;
   public errorMessage;
   public alertRegister;
+  public url;
 
   constructor(
+    private _route: ActivatedRoute,
+    private _router: Router,
     private _userService: UserService
   ) {
     this.user = new User('', '', '', '', '', 'ROLE_USER', ''); //Init the user
     this.userRegister = new User('', '', '', '', '', 'ROLE_USER', ''); //Aux user
+    this.url = GLOBAL.url;
 
   }
 
@@ -119,6 +126,8 @@ export class AppComponent implements OnInit {
     localStorage.removeItem('token');
     localStorage.clear(); // remove all data
 
-    this.identity = this.token = null;
+    this.identity = null;
+    this.token = null;
+    this._router.navigate(['/']);
   }
 }

@@ -6,7 +6,7 @@ var secret = 'clave_secreta'; //clave para hash
 
 exports.createToken = function(user) {
   var payload =  {
-    sub: user.id_, //id del objeto en la BD
+    sub: user._id, //id del objeto en la BD
     name: user.name,
     surname: user.surname,
     email: user.email,

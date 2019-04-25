@@ -1,0 +1,157 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+    background: #eee;
+}
+
+.central {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.seguro {
+    margin-top: -30px;
+    background: #1C1C1F;
+    position: absolute;
+    height: 40px;
+}
+
+.seguro-album {
+    margin-top: -41px;
+    margin-left: 10px;
+}
+
+.head-title {
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.navigation {
+    text-align: center;
+    color: white;
+    background: #1C1C1F;
+    height: 100%;
+}
+
+.navigation a {
+    color: #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: white;
+}
+
+.navigation .glyphicon {
+    font-size: 25px;
+    display: block;
+    width: 100%;
+}
+
+#user_logged {
+    text-decoration: center;
+    background: #1C1C1F;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #444;
+    width: 75%;
+}
+
+#user_logged .user_image {
+    background: #eee;
+    border-radius: 100px;
+    height: 57px;
+    width: 57px;
+    margin: 0px auto;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+#user_logged .user_image img{
+    width: 57px;
+}
+
+.btn-logout {
+    cursor: pointer;
+}
+
+.actived {
+    border-bottom: 4px solid #84BD00;
+    padding-bottom: 4px;
+}
+
+.artist_image_for_edit img,
+.album_image_for_edit img{
+    width: 150px;
+}
+
+.artist-list,
+.album-list {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 30px;
+    list-style: none;
+}
+
+.artist-item{
+    width: 23%;
+    padding: 0px;
+    margin: 0px;
+    height: 317px;
+    border: 1px solid #444;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.album-item {
+    height: 357px;;
+}
+
+.artist-item .artist_image,
+.album-item .album_image {
+    height: 245px;
+    width: 100%;
+    background: #222326;
+}
+
+.artist-item .artist_image img {
+    height: 100%;
+}
+
+.album-item .album_image img {
+    width: 100%;
+}
+
+.artist-item .artist-name {
+    color: white;
+    padding: 10px;
+    background: #222326;
+}
+
+.album-item .album-name {
+}
+
+.artist-item .artist-name a,
+.album-item .album-name a {
+    color: white;
+}
+
+#artist-head-card .image,
+#album-head-card .image {
+    width: 130px;
+    height: 130px;
+
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+
+#artist-head-card .image img {
+    height: 130px;
+}
